@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WoodSafe® — hazardous waste containers with 66% less CO₂</title>
+    <meta name="description"
+        content="WoodSafe® sharps and hazardous waste containers are UN-certified, ISO-compliant and made from renewable Swedish forest materials. A drop-in replacement for fossil-based plastic bins, with 66% less CO₂." />
+
+    <!-- ============================================================
+     WoodSafe® landing section block (no nav / no footer)
+     ------------------------------------------------------------
+     • Plain HTML/CSS + a little vanilla JS. Crawlable, easy to
+       drop into BeTheme between your existing header & footer.
+     • ASSET:  = drop your media here  (search the file)
+     • VERIFY: = confirm a real claim / number before publishing
+     ============================================================ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --ink: #1d2422;
+            --ink-2: #48514d;
+            --ink-3: #79827d;
+            --green: #2f6b57;
+            --green-deep: #234f42;
+            --green-2: #3f8a70;
+            --green-soft: #e7f2ee;
+            --green-mist: #f1f7f4;
+            --bg: #ffffff;
+            --bg-soft: #f5f7f6;
+            --line: #e4e8e6;
+            --line-2: #eef1ef;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --gutter: clamp(20px, 5vw, 40px);
+            --maxw: 1180px;
+            --font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--font);
+            font-size: 17px;
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none;
+            color: inherit
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.08
+        }
+
+        p {
+            margin: 0
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 var(--gutter)
+        }
+
+        .h1 {
+            font-size: clamp(38px, 5.4vw, 68px)
+        }
+
+        .h2 {
+            font-size: clamp(30px, 3.8vw, 48px)
+        }
+
+        .h3 {
+            font-size: clamp(21px, 2vw, 26px)
+        }
+
+        .lead {
+            font-size: clamp(17px, 1.35vw, 20px);
+            line-height: 1.6;
+            color: var(--ink-2);
+            max-width: 62ch;
+            font-weight: 500
+        }
+
+        .sec {
+            padding: clamp(72px, 9vw, 120px) 0
+        }
+
+        .sec-soft {
+            background: var(--bg-soft)
+        }
+
+        .sec-mist {
+            background: var(--green-mist)
+        }
+
+        .sec-deep {
+            background: var(--green-deep);
+            color: #fff
+        }
+
+        .sec-green {
+            background: var(--green);
+            color: #fff
+        }
+
+        .intro {
+            max-width: 780px;
+            margin: 0 auto clamp(40px, 5vw, 64px);
+            text-align: center
+        }
+
+        #products .intro {
+            max-width: 960px;
+        }
+
+        .intro .h2 {
+            margin-bottom: 20px
+        }
+
+        .intro .lead {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        /* buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border-radius: 999px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background .2s ease, transform .2s ease, box-shadow .2s ease
+        }
+
+        .btn:hover {
+            background: var(--green-deep);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 28px -16px rgba(35, 79, 66, .8)
+        }
+
+        .btn .ar {
+            transition: transform .2s ease
+        }
+
+        .btn:hover .ar {
+            transform: translateX(3px)
+        }
+
+        .btn--out {
+            background: transparent;
+            color: var(--green);
+            border: 1.5px solid var(--line);
+            font-weight: 600
+        }
+
+        .btn--out:hover {
+            background: var(--green-soft);
+            border-color: var(--green);
+            color: var(--green-deep);
+            box-shadow: none
+        }
+
+        .btn--ondark {
+            background: #fff;
+            color: var(--green-deep)
+        }
+
+        .btn--ondark:hover {
+            background: var(--green-soft);
+            color: var(--green-deep)
+        }
+
+        .btn--ghostlight {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, .45)
+        }
+
+        .btn--ghostlight:hover {
+            background: rgba(255, 255, 255, .1);
+            border-color: #fff;
+            color: #fff;
+            box-shadow: none
+        }
+
+        /* image placeholder (looks intentional, on-brand) */
+        .ph {
+            background: var(--green-soft);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--green-deep);
+            min-height: 180px;
+            text-align: center;
+            padding: 24px
+        }
+
+        .ph svg {
+            width: 30px;
+            height: 30px;
+            opacity: .5
+        }
+
+        .ph span {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .04em;
+            opacity: .7
+        }
+
+        /* ---------- HERO (full-bleed letterbox band) ---------- */
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: clamp(300px, 44vw, 460px);
+            overflow: hidden;
+            color: #fff;
+            background: #0f231d
+        }
+
+        .hero-media {
+            position: absolute;
+            inset: 0;
+            z-index: 0
+        }
+
+        .hero-media .vidph {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(150deg, #1f4a3c 0%, #11271f 60%, #0c1e18 100%);
+            color: rgba(255, 255, 255, .5);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            gap: 10px;
+            flex-direction: column
+        }
+
+        .hero-media .vidph svg {
+            width: 34px;
+            height: 34px;
+            opacity: .6
+        }
+
+        .hero-scrim {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(7, 18, 14, .22) 0%, rgba(7, 18, 14, .18) 40%, rgba(7, 18, 14, .55) 80%, rgba(7, 18, 14, .72) 100%)
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: clamp(24px, 4vw, 48px) 0;
+        }
+
+        .hero-logo {
+            display: block;
+            max-width: min(clamp(200px, 52vw, 700px), 90%);
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 6px 32px rgba(0, 0, 0, .4));
+        }
+
+        .hero .h1 {
+            color: #fff;
+            margin: 0 auto 18px;
+            max-width: 62ch;
+            font-size: clamp(14px, 1.2vw, 18px);
+            font-weight: 500;
+            line-height: 1.55;
+            letter-spacing: 0.005em;
+            opacity: .88;
+        }
+
+        .hero .h1 em {
+            font-style: normal;
+            color: #9fe1cb
+        }
+
+        .hero .lead {
+            color: rgba(255, 255, 255, .92);
+            font-weight: 500;
+            margin: 0 auto;
+            max-width: 60ch;
+            font-size: clamp(15px, 1.15vw, 18px)
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center
+        }
+
+        /* ---------- CERT STRIP ---------- */
+        .certs {
+            background: #fff;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .certs-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 18px;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 0
+        }
+
+        .cert {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ink-2)
+        }
+
+        .cert svg {
+            width: 17px;
+            height: 17px;
+            color: var(--green-2);
+            flex: none
+        }
+
+        .cert+.cert {
+            padding-left: 18px;
+            border-left: 1px solid var(--line)
+        }
+
+        @media(max-width:760px) {
+            .cert+.cert {
+                border-left: 0;
+                padding-left: 0
+            }
+        }
+
+        /* ---------- COMPLIANCE STATS (animated fill numbers) ---------- */
+        .cmp-stats {
+            display: flex;
+            gap: 28px 36px;
+            flex-wrap: wrap;
+            margin: 28px 0 20px;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .cmp-stat {
+            flex: 1 1 0;
+            min-width: 120px;
+        }
+
+        .numrow {
+            display: flex;
+            align-items: flex-start;
+            line-height: .82;
+        }
+
+        .digits {
+            font-size: clamp(64px, 7vw, 100px);
+            font-weight: 800;
+            letter-spacing: -.04em;
+            line-height: .82;
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(to top,
+                    var(--green) 0%, var(--green) var(--p, 0%),
+                    rgba(47, 107, 87, .13) var(--p, 0%), rgba(47, 107, 87, .13) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .sign {
+            font-size: clamp(32px, 3.5vw, 50px);
+            font-weight: 700;
+            color: var(--green);
+            margin: clamp(6px, 1vw, 10px) 0 0 3px;
+        }
+
+        .cmp-stat-l {
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-3);
+            line-height: 1.4;
+        }
+
+        .cmp-lca-link {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--green);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(47, 107, 87, .28);
+            transition: color .2s, text-decoration-color .2s;
+        }
+
+        .cmp-lca-link:hover {
+            color: var(--green-deep);
+            text-decoration-color: var(--green-deep);
+        }
+
+        /* ---------- PARTNER LOGO STRIP ---------- */
+        .partners {
+            background: #fff;
+            border-bottom: 2px solid var(--line);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .partners::before,
+        .partners::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .partners::before {
+            left: 0;
+            background: linear-gradient(90deg, #fff 0%, transparent 100%);
+        }
+
+        .partners::after {
+            right: 0;
+            background: linear-gradient(270deg, #fff 0%, transparent 100%);
+        }
+
+        .partners-track {
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            padding: 28px 0;
+            width: max-content;
+            animation: partnerScroll 45s linear infinite;
+        }
+
+        .partners-track img {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: .55;
+            transition: filter .3s ease, opacity .3s ease;
+            flex: none;
+        }
+
+        .partners-track img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @keyframes partnerScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ---------- PROBLEM (the switch) ---------- */
+        .cols2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px
+        }
+
+        @media(max-width:840px) {
+            .cols2 {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .panel {
+            border-radius: var(--radius-lg);
+            padding: clamp(28px, 3.4vw, 40px);
+            border: 1px solid var(--line)
+        }
+
+        .panel--muted {
+            background: var(--bg-soft)
+        }
+
+        .panel--brand {
+            background: var(--green-soft);
+            border-color: #cfe6dc
+        }
+
+        .panel h3 {
+            margin-bottom: 8px
+        }
+
+        .panel .sub {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .02em;
+            color: var(--ink-3);
+            margin-bottom: 20px
+        }
+
+        .panel--brand .sub {
+            color: var(--green-deep)
+        }
+
+        .plist {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .plist li {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+            padding: 13px 0;
+            border-top: 1px solid var(--line-2);
+            font-size: 15.5px;
+            color: var(--ink-2);
+            font-weight: 500
+        }
+
+        .panel--brand .plist li {
+            border-color: #d6e8e0
+        }
+
+        .plist li:first-child {
+            border-top: 0
+        }
+
+        .plist .ic {
+            flex: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-top: 1px
+        }
+
+        .plist .ic svg {
+            width: 11px;
+            height: 11px
+        }
+
+        .ic-bad {
+            background: #f0ddd4;
+            color: #9a4a25
+        }
+
+        .ic-good {
+            background: #cfe8dd;
+            color: var(--green-deep)
+        }
+
+        /* ---------- EQUIVALENCE TABLE ---------- */
+        .cmp-layout {
+            display: grid;
+            grid-template-columns: .42fr .58fr;
+            gap: clamp(32px, 4vw, 56px);
+            align-items: start;
+        }
+
+        @media(max-width:960px) {
+            .cmp-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cmp-layout .intro {
+            max-width: none;
+            margin: 0;
+            text-align: left;
+        }
+
+        .cmp-layout .intro .lead {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .cmp-wrap {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--line);
+            background: #fff
+        }
+
+        table.cmp {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px
+        }
+
+        .cmp th,
+        .cmp td {
+            padding: 18px 22px;
+            text-align: left;
+            font-size: 15.5px;
+            border-top: 1px solid var(--line-2)
+        }
+
+        .cmp thead th {
+            border-top: 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--ink)
+        }
+
+        .cmp thead th.muted {
+            color: var(--ink-3);
+            font-weight: 600
+        }
+
+        .cmp thead th.ws {
+            color: var(--green-deep)
+        }
+
+        .cmp td:first-child,
+        .cmp th:first-child {
+            color: var(--ink-2);
+            font-weight: 500
+        }
+
+        .cmp .col-ws {
+            background: var(--green-mist);
+            font-weight: 600;
+            color: var(--ink)
+        }
+
+        .cmp .yes {
+            color: var(--green-deep);
+            font-weight: 600
+        }
+
+        .cmp .win {
+            color: var(--green-deep);
+            font-weight: 700
+        }
+
+        .cmp .neu {
+            color: var(--ink-3);
+            font-weight: 500
+        }
+
+        .cmp tbody tr:hover td {
+            background: var(--bg-soft)
+        }
+
+        .cmp tbody tr:hover td.col-ws {
+            background: #dcebe4
+        }
+
+        @media(max-width:600px) {
+
+            .cmp th,
+            .cmp td {
+                padding: 13px 14px;
+                font-size: 14px
+            }
+
+            table.cmp {
+                min-width: 420px
+            }
+        }
+
+        /* ---------- CALCULATOR v5 (transposed full table) ---------- */
+        .calc-tbl-outer {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,.13)
+        }
+
+        .calc-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 640px
+        }
+
+        .calc-tbl th,
+        .calc-tbl td {
+            padding: 10px 12px;
+            border: 1px solid rgba(255,255,255,.08);
+            vertical-align: middle;
+            text-align: center;
+            white-space: nowrap;
+            color: #fff;
+            font-size: 13px
+        }
+
+        /* left label column */
+        .tbl-lh {
+            text-align: left;
+            width: 176px;
+            padding-left: 16px;
+            background: rgba(255,255,255,.05);
+            font-weight: 600;
+            font-size: 12px;
+            color: rgba(255,255,255,.68);
+            border-right-color: rgba(255,255,255,.14)
+        }
+
+        /* header row */
+        .tbl-head-row th {
+            background: rgba(255,255,255,.07);
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.01em
+        }
+
+        .tbl-head-row .tbl-lh {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,.38)
+        }
+
+        /* input row */
+        .tbl-input-row td { background: rgba(255,255,255,.02); padding: 7px 8px }
+        .tbl-input-row .tbl-lh {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,.45)
+        }
+
+        .ctbl-input {
+            width: 100%;
+            max-width: 84px;
+            background: rgba(255,255,255,.09);
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 6px;
+            color: #fff;
+            font: 700 13px/1 var(--font);
+            text-align: center;
+            padding: 6px 4px;
+            outline: none;
+            -moz-appearance: textfield;
+            transition: border-color .15s, background .15s
+        }
+
+        .ctbl-input:focus {
+            border-color: #9fe1cb;
+            background: rgba(159,225,203,.1)
+        }
+
+        .ctbl-input::-webkit-outer-spin-button,
+        .ctbl-input::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0 }
+
+        /* CO₂ reduction row */
+        .tbl-co2-row td {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: rgba(255,255,255,.35);
+            font-variant-numeric: tabular-nums;
+            transition: color .25s
+        }
+
+        .tbl-co2-row td.live { color: #9fe1cb }
+
+        /* result rows */
+        .tbl-result-row td {
+            font-size: 14px;
+            font-weight: 800;
+            color: #9fe1cb;
+            background: rgba(159,225,203,.07);
+            border-top-color: rgba(159,225,203,.18);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -.01em
+        }
+
+        .tbl-result-row .tbl-lh {
+            color: #9fe1cb;
+            background: rgba(159,225,203,.07);
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        /* equivalences */
+        .tbl-equiv-row td { background: rgba(255,255,255,.02) }
+        .tbl-equiv-row .tbl-lh { font-weight: 700; font-size: 12px }
+
+        .tbl-equiv-num {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: #fff;
+            font-variant-numeric: tabular-nums;
+            text-align: right
+        }
+
+        .tbl-equiv-desc {
+            text-align: left;
+            padding-left: 16px;
+            color: rgba(255,255,255,.55);
+            font-size: 12.5px;
+            font-weight: 500
+        }
+
+        /* comparison bar row (inline in table) */
+        .tbl-cmp-row td { background: rgba(255,255,255,.03) }
+        .tbl-cmp-row .tbl-lh {
+            font-size: 11px;
+            font-weight: 700;
+            color: rgba(255,255,255,.5)
+        }
+
+        .tbl-cmp-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding: 2px 0
+        }
+
+        .tbl-cmp-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .tbl-cmp-lbl {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,.58);
+            width: 86px;
+            flex-shrink: 0
+        }
+
+        .tbl-cmp-track {
+            flex: 1;
+            height: 6px;
+            background: rgba(255,255,255,.1);
+            border-radius: 99px;
+            overflow: hidden
+        }
+
+        .tbl-cmp-fill {
+            height: 100%;
+            border-radius: 99px;
+            transition: width .45s cubic-bezier(.4,0,.2,1)
+        }
+
+        .fill-plastic { background: rgba(255,255,255,.3) }
+        .fill-ws      { background: #9fe1cb }
+
+        .tbl-cmp-val {
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255,255,255,.75);
+            width: 46px;
+            text-align: right;
+            flex-shrink: 0;
+            font-variant-numeric: tabular-nums
+        }
+
+        .calc-note {
+            color: rgba(255,255,255,.4);
+            font-size: 12px;
+            margin-top: 18px;
+            font-weight: 500;
+            line-height: 1.7
+        }
+
+        /* ---------- LCA ---------- */
+        .lca {
+            display: grid;
+            grid-template-columns: 1.25fr .9fr;
+            gap: clamp(32px, 5vw, 56px);
+            align-items: center
+        }
+
+        @media(max-width:840px) {
+            .lca {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .stats {
+            display: flex;
+            gap: clamp(24px, 4vw, 48px);
+            flex-wrap: wrap;
+            margin: 30px 0 32px
+        }
+
+        .stat .n {
+            font-size: clamp(40px, 5vw, 60px);
+            font-weight: 800;
+            letter-spacing: -.03em;
+            line-height: 1;
+            color: var(--green)
+        }
+
+        .stat .l {
+            font-size: 13.5px;
+            color: var(--ink-3);
+            margin-top: 8px;
+            max-width: 20ch;
+            font-weight: 500
+        }
+
+        .lca .ph {
+            aspect-ratio: 4/5;
+            min-height: 0
+        }
+
+        /* ---------- PRODUCTS ---------- */
+
+        /* size selector */
+        .ps-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            margin-bottom: clamp(24px, 3vw, 36px);
+        }
+
+        .ps-wrap::-webkit-scrollbar {
+            display: none
+        }
+
+        .ps-track {
+            display: flex;
+            gap: 10px;
+            padding: 4px 2px;
+            width: max-content;
+            min-width: 100%;
+        }
+
+        .ps-btn {
+            flex: none;
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: 1.5px solid var(--line);
+            background: #fff;
+            color: var(--ink-2);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color .18s, color .18s, background .18s, box-shadow .18s;
+        }
+
+        .ps-btn:hover {
+            border-color: var(--green);
+            color: var(--green)
+        }
+
+        .ps-btn.active {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff;
+            box-shadow: 0 6px 18px -8px rgba(47, 107, 87, .55);
+        }
+
+        /* product detail panel */
+        .pd-wrap {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: clamp(24px, 4vw, 48px);
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: clamp(24px, 3.4vw, 40px);
+            margin-bottom: clamp(28px, 3.5vw, 44px);
+        }
+
+        .pd-visual,
+        .pd-body {
+            min-width: 0;
+        }
+
+        @media(max-width:860px) {
+            .pd-wrap {
+                grid-template-columns: 1fr
+            }
+
+            .pd-img-frame {
+                aspect-ratio: 4/3;
+            }
+        }
+
+        .pd-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .pd-img-frame {
+            background: var(--green-mist);
+            border-radius: var(--radius);
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .pd-img-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: opacity .22s ease;
+        }
+
+        .pd-cert-toggle {
+            display: flex;
+            gap: 5px;
+            background: var(--bg-soft);
+            border-radius: 999px;
+            padding: 4px;
+            border: 1px solid var(--line);
+            width: 100%;
+        }
+
+        .ct-btn {
+            flex: 1;
+            padding: 8px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--ink-2);
+            cursor: pointer;
+            transition: background .18s, color .18s;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .ct-btn.active {
+            background: var(--green);
+            color: #fff
+        }
+
+        .pd-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .pd-badge {
+            background: var(--green-soft);
+            color: var(--green-deep);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid #cfe6dc;
+            letter-spacing: .02em;
+        }
+
+        /* product right column */
+        .pd-body {
+            display: flex;
+            flex-direction: column
+        }
+
+        .pd-head {
+            margin-bottom: 20px
+        }
+
+        .pd-sz {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .pd-name {
+            font-size: clamp(18px, 1.8vw, 22px);
+            font-weight: 800;
+            letter-spacing: -.02em;
+            margin: 0 0 10px;
+        }
+
+        .pd-sub {
+            font-size: 15px;
+            color: var(--ink-2);
+            font-weight: 500;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* tab nav */
+        .pt-nav {
+            display: flex;
+            border-bottom: 2px solid var(--line);
+            margin-bottom: 22px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .pt-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .pt-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 14px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--ink-3);
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            cursor: pointer;
+            transition: color .18s, border-color .18s;
+            white-space: nowrap;
+        }
+
+        .pt-btn svg {
+            width: 15px;
+            height: 15px;
+            flex: none
+        }
+
+        .pt-btn:hover {
+            color: var(--green)
+        }
+
+        .pt-btn.active {
+            color: var(--green-deep);
+            border-bottom-color: var(--green)
+        }
+
+        .pt-panel {
+            min-height: 210px
+        }
+
+        /* spec grid */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr
+        }
+
+        .spec-row {
+            padding: 10px 12px 10px 0;
+            border-bottom: 1px solid var(--line-2)
+        }
+
+        .spec-row:nth-child(odd) {
+            border-right: 1px solid var(--line-2)
+        }
+
+        .spec-row:nth-child(even) {
+            padding-left: 12px;
+            padding-right: 0
+        }
+
+        @media(max-width:500px) {
+            .spec-grid {
+                grid-template-columns: 1fr
+            }
+
+            .spec-row:nth-child(odd) {
+                border-right: 0
+            }
+
+            .spec-row:nth-child(even) {
+                padding-left: 0
+            }
+        }
+
+        .spec-k {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            color: var(--ink-3);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .spec-v {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ink)
+        }
+
+        /* cert list */
+        .cert-ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .cert-ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14.5px;
+            color: var(--ink-2);
+            font-weight: 500;
+            padding: 11px 0;
+            border-bottom: 1px solid var(--line-2);
+        }
+
+        .cert-ul li:last-child {
+            border-bottom: 0
+        }
+
+        .cert-ic {
+            flex: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #cfe8dd;
+            color: var(--green-deep);
+            display: grid;
+            place-items: center;
+            font-size: 11px;
+            font-weight: 800;
+            margin-top: 1px;
+        }
+
+        /* video tab */
+        .pt-video-frame {
+            position: relative;
+            aspect-ratio: 16/9;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .pt-video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0
+        }
+
+        /* accessories */
+        .acc-section {
+            margin-top: clamp(32px, 4vw, 48px)
+        }
+
+        .acc-title {
+            font-size: clamp(17px, 1.5vw, 20px);
+            font-weight: 800;
+            margin: 0 0 18px;
+            letter-spacing: -.02em
+        }
+
+        .acc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        @media(max-width:900px) {
+            .acc-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:480px) {
+            .acc-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .acard2 {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #fff;
+            overflow: hidden;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .acard2:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px -22px rgba(28, 55, 46, .45)
+        }
+
+        .acard2>img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            background: var(--green-mist);
+            padding: 14px;
+            display: block;
+        }
+
+        .acard2-body {
+            padding: 14px 16px 18px
+        }
+
+        .acard2-code {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            margin-bottom: 4px
+        }
+
+        .acard2 h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 0 6px;
+            letter-spacing: -.01em
+        }
+
+        .acard2 p {
+            font-size: 13px;
+            color: var(--ink-2);
+            font-weight: 500;
+            line-height: 1.5;
+            margin: 0
+        }
+
+        /* inline accessories (under product image) */
+        .pd-accs {
+            width: 100%;
+            margin-top: 14px;
+        }
+
+        .pd-accs-lbl {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-bottom: 8px;
+        }
+
+        .pd-acc-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            margin-bottom: 6px;
+            transition: box-shadow .18s;
+        }
+
+        .pd-acc-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pd-acc-item:hover {
+            box-shadow: 0 4px 14px -8px rgba(28, 55, 46, .28);
+        }
+
+        .pd-acc-img {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+            background: var(--green-mist);
+            border-radius: 8px;
+            padding: 5px;
+            flex: none;
+        }
+
+        .pd-acc-code {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--green);
+        }
+
+        .pd-acc-name {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 2px 0 0;
+            line-height: 1.3;
+        }
+
+        .prod-foot {
+            margin-top: clamp(28px, 3.5vw, 40px);
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ---------- SOCIAL PROOF ---------- */
+        .proof {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 26px;
+            align-items: stretch
+        }
+
+        @media(max-width:840px) {
+            .proof {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .vid {
+            aspect-ratio: 16/9;
+            border-radius: var(--radius-lg);
+            overflow: hidden
+        }
+
+        .vid .ph {
+            height: 100%;
+            border-radius: 0;
+            min-height: 0
+        }
+
+        .quote {
+            font-size: clamp(20px, 2vw, 26px);
+            line-height: 1.34;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -.01em
+        }
+
+        .quote-by {
+            display: block;
+            font-size: 13.5px;
+            color: var(--ink-3);
+            margin-top: 16px;
+            font-weight: 600
+        }
+
+        .heroes {
+            margin-top: 24px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 24px;
+            background: var(--green-mist)
+        }
+
+        .heroes .t {
+            font-size: 16px;
+            font-weight: 700
+        }
+
+        .heroes p {
+            font-size: 14px;
+            color: var(--ink-2);
+            margin-top: 8px;
+            font-weight: 500
+        }
+
+        .heroes a {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--green-deep);
+            font-weight: 700
+        }
+
+        /* ---------- FAQ ---------- */
+        .faq {
+            max-width: 880px
+        }
+
+        .fitem {
+            border-top: 1px solid var(--line)
+        }
+
+        .fitem:last-child {
+            border-bottom: 1px solid var(--line)
+        }
+
+        .fq {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            text-align: left;
+            padding: 26px 0;
+            font-size: clamp(17px, 1.6vw, 20px);
+            font-weight: 700;
+            color: var(--ink)
+        }
+
+        .fq .pm {
+            flex: none;
+            width: 30px;
+            height: 30px;
+            border: 1.5px solid var(--line);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: .25s
+        }
+
+        .fq .pm svg {
+            width: 13px;
+            height: 13px;
+            transition: transform .25s
+        }
+
+        .fitem.open .fq .pm {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff
+        }
+
+        .fitem.open .fq .pm svg {
+            transform: rotate(45deg)
+        }
+
+        .fa {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease
+        }
+
+        .fa-in {
+            padding: 0 0 26px;
+            color: var(--ink-2);
+            font-size: 16px;
+            line-height: 1.65;
+            font-weight: 500;
+            max-width: 74ch
+        }
+
+        /* ---------- CONTACT CTA ---------- */
+        .cta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(36px, 5vw, 64px);
+            align-items: start
+        }
+
+        @media(max-width:840px) {
+            .cta {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+        }
+
+        .cta .h2 {
+            color: #fff;
+            margin-bottom: 18px
+        }
+
+        .cta .lead {
+            color: rgba(255, 255, 255, .88);
+            font-weight: 500
+        }
+
+        .cta-points {
+            list-style: none;
+            margin: 26px 0 0;
+            padding: 0
+        }
+
+        .cta-points li {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 9px 0;
+            color: rgba(255, 255, 255, .9);
+            font-size: 15.5px;
+            font-weight: 500
+        }
+
+        .cta-points li svg {
+            flex: none;
+            width: 20px;
+            height: 20px;
+            color: #9fe1cb
+        }
+
+        .form {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: clamp(26px, 3.2vw, 38px);
+            color: var(--ink)
+        }
+
+        .form .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        @media(max-width:520px) {
+            .form .row {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .fg {
+            margin-bottom: 16px
+        }
+
+        .fg label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink-2);
+            margin-bottom: 7px
+        }
+
+        .fg input,
+        .fg textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--line);
+            border-radius: 11px;
+            background: var(--bg-soft);
+            font: inherit;
+            font-weight: 500;
+            color: var(--ink)
+        }
+
+        .fg input:focus,
+        .fg textarea:focus {
+            outline: 0;
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(47, 107, 87, .14)
+        }
+
+        .form .btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 4px
+        }
+
+        .form-note {
+            font-size: 12.5px;
+            color: var(--ink-3);
+            margin-top: 14px;
+            text-align: center;
+            font-weight: 500
+        }
+
+        .form-ok {
+            display: none;
+            background: var(--green-soft);
+            border: 1px solid #cfe6dc;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 14px;
+            color: var(--green-deep);
+            margin-top: 14px;
+            font-weight: 600
+        }
+
+        /* reveal (visible without JS) */
+        .reveal {
+            opacity: 1;
+            transform: none
+        }
+
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .js .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .js .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none
+            }
+
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="hero" id="top">
+        <div class="hero-media">
+            <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover">
+                <source src="Marketing Material/VideWoodsafe.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-scrim"></div>
+        <div class="wrap">
+            <div class="hero-content">
+                <img src="Logos/Full white.png" alt="WoodSafe®" class="hero-logo reveal" />
+                <h1 class="h1 reveal">WoodSafe is an innovative hazardous waste container based on renewable raw
+                    materials from the forest — reduces CO₂ emissions by 66%.</h1>
+                <div class="hero-cta reveal">
+                    <a class="btn btn--ondark" href="#products">Explore the range <span class="ar">↓</span></a>
+                    <a class="btn btn--ghostlight" href="#calculator">Try the CO₂ Calculator <span class="ar">↓</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== CERTIFICATION STRIP ====================== -->
+    <div class="certs">
+        <div class="wrap certs-row">
+            <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg> UN 3291 / UN 3249</span>
+            <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg> ADR road transport</span>
+            <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg> ISO 23907-1:2019</span>
+            <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg> Autoclave tested</span>
+            <span class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg> Independent LCA</span>
+        </div>
+    </div>
+
+    <!-- ====================== NO COMPROMISE / EQUIVALENCE ====================== -->
+    <section class="sec" id="compliance">
+        <div class="wrap" style="max-width:1440px">
+            <div class="cmp-layout">
+                <div class="intro reveal">
+                    <h2 class="h2">A like-for-like swap. Minus the carbon.</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue id magna in
+                        tempus. Morbi facilisis, lacus at sodales congue, purus sapien sodales sem, ut dignissim neque
+                        augue sed ante.
+                    </p>
+                    <div class="cmp-stats">
+                        <div class="cmp-stat">
+                            <div class="numrow"><span class="digits" data-target="66">0</span><span
+                                    class="sign">%</span></div>
+                            <p class="cmp-stat-l">less CO₂ vs. polypropylene</p>
+                        </div>
+                        <div class="cmp-stat">
+                            <div class="numrow"><span class="digits" data-target="80">0</span><span
+                                    class="sign">%</span></div>
+                            <p class="cmp-stat-l">renewable Swedish forest material</p>
+                        </div>
+                    </div>
+                    <a class="cmp-lca-link"
+                        href="https://woodsafe.green/wp-content/uploads/2023/10/LCAWoodsafe_Full.pdf" target="_blank"
+                        rel="noopener">Life Cycle Assessment — Download the full report ↓</a>
+                </div>
+                <div class="cmp-wrap reveal">
+                    <table class="cmp">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="muted">Conventional fossil-plastic bin</th>
+                                <th class="ws">WoodSafe®</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ADR type approval</td>
+                                <td class="yes">Yes</td>
+                                <td class="col-ws yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Sharps injury protection</td>
+                                <td class="yes">Yes</td>
+                                <td class="col-ws yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Autoclave tested</td>
+                                <td class="yes">Yes</td>
+                                <td class="col-ws yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Single-action &amp; double-lock lid options</td>
+                                <td class="yes">Yes</td>
+                                <td class="col-ws yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Fits existing wall holders &amp; trolleys</td>
+                                <td class="yes">Yes</td>
+                                <td class="col-ws yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>ESG / annual report ready</td>
+                                <td class="neu">-</td>
+                                <td class="col-ws win">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Manufactured with green energy</td>
+                                <td class="neu">-</td>
+                                <td class="col-ws win">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Material origin</td>
+                                <td class="neu">Fossil-plastic (Virgin or recycled PP)</td>
+                                <td class="col-ws win">80% Renewable Material</td>
+                            </tr>
+                            <tr>
+                                <td>CO₂ emission</td>
+                                <td class="neu">Baseline<sup>*</sup></td>
+                                <td class="col-ws win">66% less<sup>*</sup></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top:10px;font-size:12px;color:var(--ink-3);font-weight:500"><sup>*</sup> 5,71 kg CO₂e/kg material (fossil-plastic) vs. 1,94 kg CO₂e/kg material (WoodSafe®) — source: independent LCA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== PRODUCTS ====================== -->
+    <section class="sec sec-soft" id="products">
+        <div class="wrap">
+            <div class="intro reveal">
+                <h2 class="h2">One container family for every setting.</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue id magna in
+                    tempus. Morbi facilisis, lacus at sodales congue, purus sapien sodales sem, ut dignissim neque augue
+                    sed ante.</p>
+            </div>
+
+            <!-- Size selector -->
+            <div class="ps-wrap reveal">
+                <div class="ps-track">
+                    <button class="ps-btn active" data-pid="0">0.5 L</button>
+                    <button class="ps-btn" data-pid="1">2 L</button>
+                    <button class="ps-btn" data-pid="2">3 L</button>
+                    <button class="ps-btn" data-pid="3">6 L</button>
+                    <button class="ps-btn" data-pid="4">12 L</button>
+                    <button class="ps-btn" data-pid="5">25 L</button>
+                    <button class="ps-btn" data-pid="6">50 L</button>
+                </div>
+            </div>
+
+            <!-- Product detail panel -->
+            <div class="pd-wrap reveal">
+
+                <!-- Left: image + toggles -->
+                <div class="pd-visual">
+                    <div class="pd-img-frame">
+                        <img id="pdImg" src="WoodSafe Products/Woodsafe 0,5L UN3291.png" alt="WoodSafe 0.5 L" />
+                    </div>
+                    <div class="pd-badge-row">
+                        <span class="pd-badge">UN 3291</span>
+                        <span class="pd-badge">UN 3249</span>
+                        <span class="pd-badge">ISO 23907-1</span>
+                        <span class="pd-badge">ADR</span>
+                        <span class="pd-badge">LCA verified</span>
+                    </div>
+                    <div class="pd-accs" id="pdAccs"></div>
+                </div>
+
+                <!-- Right: tabs -->
+                <div class="pd-body">
+                    <div class="pd-head">
+                        <div class="pd-sz" id="pdSize">0.5 L</div>
+                        <h3 class="pd-name" id="pdName">Sharps &amp; Hazardous Waste Container</h3>
+                        <p class="pd-sub" id="pdDesc">Compact unit for workstations, patient rooms and point-of-care
+                            settings where space is limited.</p>
+                    </div>
+
+                    <div class="pt-nav">
+                        <button class="pt-btn active" data-tab="info">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="10" cy="10" r="8" />
+                                <path d="M10 9v5" />
+                                <circle cx="10" cy="6.5" r=".5" fill="currentColor" stroke="none" />
+                            </svg>
+                            Product info
+                        </button>
+                        <button class="pt-btn" data-tab="cert">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path
+                                    d="m10 2 2.09 4.26 4.71.68-3.4 3.32.8 4.69L10 12.77l-4.2 2.18.8-4.69-3.4-3.32 4.71-.68z" />
+                            </svg>
+                            Certification
+                        </button>
+                        <button class="pt-btn" data-tab="video">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polygon points="5 3 18 10 5 17 5 3" />
+                            </svg>
+                            Instructional video
+                        </button>
+                    </div>
+
+                    <div class="pt-panel" id="pt-info">
+                        <div class="spec-grid" id="pdSpecGrid"></div>
+                    </div>
+
+                    <div class="pt-panel" id="pt-cert" style="display:none">
+                        <ul class="cert-ul">
+                            <li><span class="cert-ic">✓</span> ADR, ADR-S certified (RISE-C900694, RISE-C900879)</li>
+                            <li><span class="cert-ic">✓</span> ISO 23907-1:2019 — sharps injury prevention</li>
+                            <li><span class="cert-ic">✓</span> UN 3291 — sharps &amp; infectious waste type-approved
+                            </li>
+                            <li><span class="cert-ic">✓</span> UN 3249 — hazardous pharmaceutical waste type-approved
+                            </li>
+                            <li><span class="cert-ic">✓</span> Independent LCA — cradle to grave (ISO 14040/44)</li>
+                            <li><span class="cert-ic">✓</span> 66% reduction in CO₂ emissions vs. polypropylene</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-panel" id="pt-video" style="display:none">
+                        <div class="pt-video-frame">
+                            <iframe id="pdVideo" src="https://www.youtube.com/embed/GWj5T40rPy0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prod-foot reveal">
+                <a class="btn btn--out" href="https://woodsafe.green/products/">See the full product range <span
+                        class="ar">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== CO2 CALCULATOR ====================== -->
+    <section class="sec sec-deep" id="calculator">
+        <div class="wrap">
+            <div class="intro reveal">
+                <h2 class="h2" style="color:#fff">See what your facility would save.</h2>
+                <p class="lead" style="color:rgba(255,255,255,.85)">66% is the product figure. The number that moves a
+                    decision is yours. Enter your volumes below, then run the full report.</p>
+            </div>
+
+            <div class="calc-tbl-outer reveal">
+                <table class="calc-tbl">
+                    <thead>
+                        <tr class="tbl-head-row">
+                            <th class="tbl-lh">Potential usage</th>
+                            <th>0.5 L</th>
+                            <th>2.3 L</th>
+                            <th>3.3 L</th>
+                            <th>6 L</th>
+                            <th>12 L</th>
+                            <th>25 L</th>
+                            <th>50 L</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tbl-input-row">
+                            <td class="tbl-lh"># USE / YEAR / SIZE</td>
+                            <td><input class="ctbl-input" type="number" id="cqty-0" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-1" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-2" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-3" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-4" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-5" value="100" min="0" /></td>
+                            <td><input class="ctbl-input" type="number" id="cqty-6" value="100" min="0" /></td>
+                        </tr>
+                        <tr class="tbl-co2-row">
+                            <td class="tbl-lh">CO₂ reduction</td>
+                            <td id="csaved-0">—</td>
+                            <td id="csaved-1">—</td>
+                            <td id="csaved-2">—</td>
+                            <td id="csaved-3">—</td>
+                            <td id="csaved-4">—</td>
+                            <td id="csaved-5">—</td>
+                            <td id="csaved-6">—</td>
+                        </tr>
+                        <tr class="tbl-result-row">
+                            <td class="tbl-lh">Total potential CO₂ reduction</td>
+                            <td colspan="7" id="crpTotalRow">—</td>
+                        </tr>
+                        <tr class="tbl-result-row">
+                            <td class="tbl-lh">Reduction of fossil plastic use</td>
+                            <td colspan="7" id="crpPlasticRow">—</td>
+                        </tr>
+                        <tr class="tbl-cmp-row">
+                            <td class="tbl-lh">Your footprint:<br>Plastic vs. WoodSafe®</td>
+                            <td colspan="7">
+                                <div class="tbl-cmp-inner">
+                                    <div class="tbl-cmp-bar-row">
+                                        <span class="tbl-cmp-lbl">Fossil-plastic</span>
+                                        <div class="tbl-cmp-track"><div class="tbl-cmp-fill fill-plastic" id="tblFillPlastic" style="width:100%"></div></div>
+                                        <span class="tbl-cmp-val" id="tblValPlastic">—</span>
+                                    </div>
+                                    <div class="tbl-cmp-bar-row">
+                                        <span class="tbl-cmp-lbl">WoodSafe®</span>
+                                        <div class="tbl-cmp-track"><div class="tbl-cmp-fill fill-ws" id="tblFillWs" style="width:34%"></div></div>
+                                        <span class="tbl-cmp-val" id="tblValWs">—</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="tbl-equiv-row">
+                            <td class="tbl-lh" rowspan="2">Yearly CO₂ savings<br>equivalent to</td>
+                            <td class="tbl-equiv-num" id="crpKmVal">—</td>
+                            <td colspan="6" class="tbl-equiv-desc">km driving (average 93 g/km CO₂)</td>
+                        </tr>
+                        <tr class="tbl-equiv-row">
+                            <td class="tbl-equiv-num" id="crpWorldVal">—</td>
+                            <td colspan="6" class="tbl-equiv-desc">times around the world in a car</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8" style="background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.13);padding:14px 16px;text-align:right">
+                                <a href="https://woodsafe.green/co2-kalkylator/" target="_blank" rel="noopener" class="btn btn--ondark" style="display:inline-flex">Run the full CO₂ report <span class="ar">→</span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="calc-note">
+                Per-container saving = container weight × 3.77 kg CO₂eq/kg — the verified LCA differential between
+                WoodSafe Bio80 (1.94 kg CO₂eq/kg) and 100% virgin polypropylene (5.71 kg CO₂eq/kg), cradle-to-grave.
+                Source: Miljögiraff Report 1293, ISO 14040/44, IPCC GWP 2021 100-year. Tree proxy: 21 kg CO₂/tree/year.
+                Car: 93 g CO₂/km (EU average).
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== FAQ ====================== -->
+    <section class="sec sec-soft" id="faq">
+        <div class="wrap">
+            <div class="intro reveal">
+                <h2 class="h2">The questions procurement always asks.</h2>
+            </div>
+            <div class="faq reveal">
+                <div class="fitem">
+                    <button class="fq" aria-expanded="false">Is it really as safe and compliant as a plastic bin?<span
+                            class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></span></button>
+                    <div class="fa">
+                        <div class="fa-in">Yes. Every WoodSafe container holds active UN 3291 and UN 3249 type approvals
+                            for ADR road transport of hazardous goods, and is certified to ISO 23907-1:2019 for sharps
+                            injury prevention. Each product is independently tested and autoclave tested. Compliance is
+                            identical to conventional containers.</div>
+                    </div>
+                </div>
+                <div class="fitem">
+                    <button class="fq" aria-expanded="false">Will we have to change our handling or workflow?<span
+                            class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></span></button>
+                    <div class="fa">
+                        <div class="fa-in">No. WoodSafe is designed as a drop-in replacement: the same single-action and
+                            double-lock lids, the same wall holders and trolleys, and the same disposal routes your
+                            teams already use. You can see the product specs and accessories we offer in our <a
+                                href="products.html">products
+                                section</a>.</div>
+                    </div>
+                </div>
+                <div class="fitem">
+                    <button class="fq" aria-expanded="false">Where does the 66% figure come from?<span class="pm"><svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></span></button>
+                    <div class="fa">
+                        <div class="fa-in">From an independent cradle-to-grave Life Cycle Assessment carried out to ISO
+                            14040 and ISO 14044, comparing WoodSafe against polypropylene equivalents. The full report
+                            is available to download above.</div>
+                    </div>
+                </div>
+                <div class="fitem">
+                    <button class="fq" aria-expanded="false">What is it actually made of?<span class="pm"><svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></span></button>
+                    <div class="fa">
+                        <div class="fa-in">A biocomposite based on renewable residuals from Swedish forests, roughly 80%
+                            renewable content, manufactured in Sweden. It replaces the virgin fossil-based plastic used
+                            in conventional containers.</div>
+                    </div>
+                </div>
+                <div class="fitem">
+                    <button class="fq" aria-expanded="false">How do we order, and what about volume pricing?<span
+                            class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></span></button>
+                    <div class="fa">
+                        <div class="fa-in">Get in touch through the form below and our team will follow up with sizing,
+                            volume pricing and distribution details for your facility.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== CONTACT / CTA ====================== -->
+    <section class="sec sec-green" id="contact" style="display:none">
+        <div class="wrap cta">
+            <div class="reveal">
+                <h2 class="h2">Questions, or suggestions for us?</h2>
+                <p class="lead">Ask us anything about WoodSafe — sizing, certification, distribution or sustainability —
+                    or tell us how we can make it better. We read every message.</p>
+                <ul class="cta-points">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg> A direct reply from our team</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg> Specification &amp; certification details</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg> A CO₂ estimate for your volumes</li>
+                </ul>
+            </div>
+            <div class="reveal">
+                <!-- VERIFY: wire this form to your CRM / email endpoint. It currently shows a local confirmation only. -->
+                <form class="form" id="leadForm" novalidate>
+                    <div class="row">
+                        <div class="fg"><label for="fn">First name</label><input id="fn" type="text"
+                                autocomplete="given-name" required></div>
+                        <div class="fg"><label for="ln">Last name</label><input id="ln" type="text"
+                                autocomplete="family-name" required></div>
+                    </div>
+                    <div class="fg"><label for="email">Email</label><input id="email" type="email" autocomplete="email"
+                            required></div>
+                    <div class="fg"><label for="org">Organisation <em>(optional)</em></label><input id="org" type="text"
+                            autocomplete="organization"></div>
+                    <div class="fg"><label for="msg">Your question or suggestion</label><textarea id="msg"
+                            rows="3"></textarea></div>
+                    <button class="btn" type="submit">Send message <span class="ar">→</span></button>
+                    <div class="form-note">We’ll only use your details to respond to this message.</div>
+                    <div class="form-ok" id="formOk">Thanks — this is a demo form. Connect it to your CRM or email to go
+                        live.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== PARTNER LOGOS ====================== -->
+    <div class="partners">
+        <div class="partners-track">
+            <img src="PartnerLogo/AstraZeneca-Logo.png" alt="AstraZeneca" />
+            <img src="PartnerLogo/Novo Nordisk Logo.png" alt="Novo Nordisk" />
+            <img src="PartnerLogo/ThermoFisher Logo.png" alt="Thermo Fisher" />
+            <img src="PartnerLogo/Cytiva.svg.png" alt="Cytiva" />
+            <img src="PartnerLogo/VWR Logo.png" alt="VWR" />
+            <img src="PartnerLogo/BioArctic Logo.png" alt="BioArctic" />
+            <img src="PartnerLogo/Apoteket_Logo.svg.png" alt="Apoteket" />
+            <img src="PartnerLogo/Apotea-logo.png" alt="Apotea" />
+            <img src="PartnerLogo/Doz Apotek.png" alt="Doz Apotek" />
+            <img src="PartnerLogo/OneMed.png" alt="OneMed" />
+            <img src="PartnerLogo/mediq-logo-4.png" alt="Mediq" />
+            <img src="PartnerLogo/Spruyt Hillen.png" alt="Spruyt Hillen" />
+            <img src="PartnerLogo/Sodexo Logo.png" alt="Sodexo" />
+            <img src="PartnerLogo/RagnSells Logo.png" alt="RagnSells" />
+            <img src="PartnerLogo/Sweden Recycling.png" alt="Sweden Recycling" />
+            <img src="PartnerLogo/Region Halland Logo.png" alt="Region Halland" />
+            <img src="PartnerLogo/Region Skane Logo.png" alt="Region Skåne" />
+            <img src="PartnerLogo/region-stockholm_rgb.png" alt="Region Stockholm" />
+            <img src="PartnerLogo/Uppsala University Logo.png" alt="Uppsala University" />
+            <!-- duplicate set for seamless loop -->
+            <img src="PartnerLogo/AstraZeneca-Logo.png" alt="AstraZeneca" />
+            <img src="PartnerLogo/Novo Nordisk Logo.png" alt="Novo Nordisk" />
+            <img src="PartnerLogo/ThermoFisher Logo.png" alt="Thermo Fisher" />
+            <img src="PartnerLogo/Cytiva.svg.png" alt="Cytiva" />
+            <img src="PartnerLogo/VWR Logo.png" alt="VWR" />
+            <img src="PartnerLogo/BioArctic Logo.png" alt="BioArctic" />
+            <img src="PartnerLogo/Apoteket_Logo.svg.png" alt="Apoteket" />
+            <img src="PartnerLogo/Apotea-logo.png" alt="Apotea" />
+            <img src="PartnerLogo/Doz Apotek.png" alt="Doz Apotek" />
+            <img src="PartnerLogo/OneMed.png" alt="OneMed" />
+            <img src="PartnerLogo/mediq-logo-4.png" alt="Mediq" />
+            <img src="PartnerLogo/Spruyt Hillen.png" alt="Spruyt Hillen" />
+            <img src="PartnerLogo/Sodexo Logo.png" alt="Sodexo" />
+            <img src="PartnerLogo/RagnSells Logo.png" alt="RagnSells" />
+            <img src="PartnerLogo/Sweden Recycling.png" alt="Sweden Recycling" />
+            <img src="PartnerLogo/Region Halland Logo.png" alt="Region Halland" />
+            <img src="PartnerLogo/Region Skane Logo.png" alt="Region Skåne" />
+            <img src="PartnerLogo/region-stockholm_rgb.png" alt="Region Stockholm" />
+            <img src="PartnerLogo/Uppsala University Logo.png" alt="Uppsala University" />
+        </div>
+    </div>
+
+    <script>
+        document.body.classList.add('js');
+
+        // reveal on scroll
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        // FAQ accordion
+        document.querySelectorAll('.fq').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = btn.parentElement, ans = item.querySelector('.fa');
+                var open = item.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                ans.style.maxHeight = open ? (ans.scrollHeight + 'px') : '0px';
+            });
+        });
+
+        // ---- CO2 calculator (transposed table) ----
+        (function () {
+            var CO2 = [0.33, 0.82, 1.01, 1.87, 2.96, 5.00, 7.75];
+            var qtys = [100, 100, 100, 100, 100, 100, 100];
+
+            function fmt(n) { return n.toLocaleString('en-US'); }
+
+            function calc() {
+                var savings = CO2.map(function (c, i) { return qtys[i] * c; });
+                var totalSaved = savings.reduce(function (a, b) { return a + b; }, 0);
+
+                // per-size CO₂ reduction row
+                savings.forEach(function (s, i) {
+                    var el = document.getElementById('csaved-' + i);
+                    if (!el) return;
+                    el.textContent = s > 0 ? fmt(Math.round(s)) + ' kg' : '—';
+                    el.classList.toggle('live', s > 0);
+                });
+
+                // total CO₂ reduction row
+                var totEl = document.getElementById('crpTotalRow');
+                if (totEl) totEl.textContent = totalSaved > 0
+                    ? fmt(Math.round(totalSaved)) + ' kg per year  −66%'
+                    : '—';
+
+                // fossil plastic reduction = 80% of total material weight
+                var totalMat = CO2.reduce(function (acc, c, i) {
+                    return acc + qtys[i] * (c / 3.77);
+                }, 0);
+                var plasticEl = document.getElementById('crpPlasticRow');
+                if (plasticEl) plasticEl.textContent = totalMat > 0
+                    ? fmt(Math.round(totalMat * 0.80)) + ' kg per year  −80%'
+                    : '—';
+
+                // comparison bars
+                var totalPlasticCO2 = totalMat * 5.71;
+                var totalWsCO2      = totalMat * 1.94;
+                var fpEl  = document.getElementById('tblFillPlastic');
+                var fwEl  = document.getElementById('tblFillWs');
+                var vpEl  = document.getElementById('tblValPlastic');
+                var vwEl  = document.getElementById('tblValWs');
+                if (fpEl)  fpEl.style.width  = '100%';
+                if (fwEl)  fwEl.style.width  = totalPlasticCO2 > 0
+                    ? (totalWsCO2 / totalPlasticCO2 * 100).toFixed(1) + '%' : '34%';
+                if (vpEl)  vpEl.textContent  = totalSaved > 0 ? fmt(Math.round(totalPlasticCO2)) + ' kg' : '—';
+                if (vwEl)  vwEl.textContent  = totalSaved > 0 ? fmt(Math.round(totalWsCO2))      + ' kg' : '—';
+
+                // equivalences
+                var km    = Math.round(totalSaved / 0.093);
+                var world = (km / 40075).toFixed(1);
+                var kmEl    = document.getElementById('crpKmVal');
+                var worldEl = document.getElementById('crpWorldVal');
+                if (kmEl)    kmEl.textContent    = totalSaved > 0 ? fmt(km)    : '—';
+                if (worldEl) worldEl.textContent = totalSaved > 0 ? world       : '—';
+            }
+
+            for (var i = 0; i < CO2.length; i++) {
+                (function (idx) {
+                    var inp = document.getElementById('cqty-' + idx);
+                    if (!inp) return;
+                    inp.addEventListener('input', function () {
+                        var v = parseInt(this.value, 10);
+                        qtys[idx] = isNaN(v) || v < 0 ? 0 : v;
+                        calc();
+                    });
+                }(i));
+            }
+
+            calc();
+        }());
+
+        // demo form
+        document.getElementById('leadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formOk').style.display = 'block';
+        });
+
+        // ---- Product showcase ----
+        var wsProducts = [
+            {
+                size: '0.5 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Compact unit for workstations, patient rooms and point-of-care settings where space is limited.',
+                img3291: 'WoodSafe Products/Woodsafe 0,5L UN3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 0,5L UN3249 (1).png',
+                video: 'GWj5T40rPy0',
+                specs: [
+                    ['Total volume', '0.5 L'], ['Max filling vol.', '0.35 L'],
+                    ['Weight', '88 g'], ['Dimensions', 'ø8 cm × 14.5 cm'],
+                    ['Lid (unfolded)', '20 × 8.5 × 2 cm'], ['Item number', 'WS005NO01'],
+                    ['EAN code', '7350062160635'], ['Qty / package', '50'],
+                    ['Package weight', '5.4 kg'], ['Pkgs / pallet', '28'],
+                    ['Containers / pallet', '1,400'], ['Pallet weight', '151.2 kg']
+                ],
+                accs: [
+                    { code: 'TBWS-21', name: 'Wall Holder — 0.5 L', img: 'WoodSafe Products/Accessories_Wall Holder- 0.5L Container-TBWS-21.jpg' }
+                ]
+            },
+            {
+                size: '2.3 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Mid-size container for busy clinical areas and laboratory environments.',
+                img3291: 'WoodSafe Products/Woodsafe 2,3L UN3291 2.png',
+                img3249: 'WoodSafe Products/Woodsafe 2,3L UN3249 2.png',
+                video: 'xb5Sadd48nU',
+                specs: [
+                    ['Total volume', '2.3 L'], ['Max filling vol.', '1.7 L'],
+                    ['Weight', '218 g'], ['Dimensions', 'ø16.5 cm × 15 cm'],
+                    ['Lid (unfolded)', '39 × 17 × 3 cm'], ['Article number', 'WS020NO01'],
+                    ['EAN code', '7350062160642'], ['Qty / package', '70'],
+                    ['Package weight', '17.5 kg'], ['Pkgs / pallet', '6'],
+                    ['Containers / pallet', '420'], ['Pallet weight', '105 kg']
+                ],
+                accs: [
+                    { code: 'TBWS-22', name: 'Wall Holder — 2–3 L', img: 'WoodSafe Products/Accessories_WallHolder 2-3 liters - TBWS-22.jpg' }
+                ]
+            },
+            {
+                size: '3.3 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Versatile round container for demanding laboratory and clinical settings.',
+                img3291: 'WoodSafe Products/Woodsafe 3L UN3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 3L UN3249.png',
+                video: 'xb5Sadd48nU',
+                specs: [
+                    ['Total volume', '3.3 L'], ['Max filling vol.', '2.7 L'],
+                    ['Weight', '267 g'], ['Dimensions', 'ø16.5 cm × 20 cm'],
+                    ['Lid (unfolded)', '40 × 17 × 3 cm'], ['Item number', 'WS030NO01'],
+                    ['EAN code', '7350062160659'], ['Qty / package', '50'],
+                    ['Package weight', '17.2 kg'], ['Pkgs / pallet', '6'],
+                    ['Containers / pallet', '300'], ['Pallet weight', '103.2 kg']
+                ],
+                accs: [
+                    { code: 'TBWS-22', name: 'Wall Holder — 2–3 L', img: 'WoodSafe Products/Accessories_WallHolder 2-3 liters - TBWS-22.jpg' }
+                ]
+            },
+            {
+                size: '6 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Available in single-lid and double-lock configurations for higher-risk waste streams.',
+                img3291: 'WoodSafe Products/Woodsafe 6L 3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 6L 3249.png',
+                video: 'PYUDX5W7JjQ',
+                specs: [
+                    ['Total volume', '6.0 L'], ['Max filling vol.', '4.8 L'],
+                    ['Weight', '495 g'], ['Dimensions', '31.5 × 18.7 × 15 cm'],
+                    ['Lid (double)', '30 × 18 × 3 cm'], ['Art. no. (double lid)', '1060120'],
+                    ['EAN code', '7350062160888'], ['Qty / package', '30'],
+                    ['Pkg dimensions', '760 × 385 × 600 mm'], ['Containers / pallet', '180'],
+                    ['Pallet weight', '117 kg'], ['', '']
+                ],
+                accs: [
+                    { code: 'TBWS-23', name: 'Wall Holder — 6–12 L', img: 'WoodSafe Products/Accessories_Wall Holder 6-12L Container-TBWS-23.jpg' },
+                    { code: 'TBWS-703', name: 'Standard Trolley', img: 'WoodSafe Products/Accessories_Standard Trolley-TBWS-703.jpg' }
+                ]
+            },
+            {
+                size: '12 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'High-capacity medium container with single-action and double-lock lid variants.',
+                img3291: 'WoodSafe Products/Woodsafe 12L UN3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 12L UN3249 (1).png',
+                video: 'PYUDX5W7JjQ',
+                specs: [
+                    ['Total volume', '12 L'], ['Max filling vol.', '10.9 L'],
+                    ['Weight', '785 g'], ['Dimensions', '31.5 × 18.7 × 34 cm'],
+                    ['Lid (double)', '30 × 18 × 3 cm'], ['Art. no. (double lid)', '1120120'],
+                    ['EAN code', '7350062160895'], ['Qty / package', '20'],
+                    ['Pkg dimensions', '760 × 385 × 600 mm'], ['Containers / pallet', '120'],
+                    ['Pallet weight', '110 kg'], ['', '']
+                ],
+                accs: [
+                    { code: 'TBWS-23', name: 'Wall Holder — 6–12 L', img: 'WoodSafe Products/Accessories_Wall Holder 6-12L Container-TBWS-23.jpg' },
+                    { code: 'TBWS-703', name: 'Standard Trolley', img: 'WoodSafe Products/Accessories_Standard Trolley-TBWS-703.jpg' }
+                ]
+            },
+            {
+                size: '25 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Large container for high-volume waste streams in laboratories and clinical settings.',
+                img3291: 'WoodSafe Products/Woodsafe 25L UN3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 25L UN3249 (1).png',
+                video: 'FlnuPyrtvxw',
+                specs: [
+                    ['Total volume', '28 L'], ['Max filling vol.', '22 L'],
+                    ['Weight', '1,325 g'], ['Dimensions', '39.5 × 39.5 × 24 cm'],
+                    ['Lid (double)', '38.5 × 38.5 × 3 cm'], ['Art. no. (double lid)', '1250120'],
+                    ['EAN code', '7350062161274'], ['Containers / pallet', '132'],
+                    ['Pallet weight', '198 kg'], ['', ''],
+                    ['', ''], ['', '']
+                ],
+                accs: [
+                    { code: 'TBWS-703', name: 'Standard Trolley', img: 'WoodSafe Products/Accessories_Standard Trolley-TBWS-703.jpg' }
+                ]
+            },
+            {
+                size: '50 L', name: 'Sharps &amp; Hazardous Waste Container',
+                desc: 'Maximum-capacity container for large laboratories and high-throughput clinical environments.',
+                img3291: 'WoodSafe Products/Woodsafe 50L UN3291.png',
+                img3249: 'WoodSafe Products/Woodsafe 50L UN3249.png',
+                video: 'FlnuPyrtvxw',
+                specs: [
+                    ['Total volume', '54 L'], ['Max filling vol.', '48 L'],
+                    ['Weight', '2,055 g'], ['Dimensions', '39.5 × 39.5 × 49.5 cm'],
+                    ['Lid (double)', '38.5 × 38.5 × 3 cm'], ['Art. no. (double lid)', '1500120'],
+                    ['EAN code', '7350062161038'], ['Containers / pallet', '96'],
+                    ['Pallet weight', '208 kg'], ['', ''],
+                    ['', ''], ['', '']
+                ],
+                accs: [
+                    { code: 'TBWS-703', name: 'Standard Trolley', img: 'WoodSafe Products/Accessories_Standard Trolley-TBWS-703.jpg' }
+                ]
+            }
+        ];
+
+        var wsProdIdx = 0;
+
+        function wsSwitchTab(tab) {
+            document.querySelectorAll('.pt-btn').forEach(function (b) {
+                b.classList.toggle('active', b.dataset.tab === tab);
+            });
+            ['info', 'cert', 'video'].forEach(function (t) {
+                document.getElementById('pt-' + t).style.display = t === tab ? '' : 'none';
+            });
+        }
+
+        function wsUpdateImage() {
+            var p = wsProducts[wsProdIdx];
+            var img = document.getElementById('pdImg');
+            img.style.opacity = '0';
+            setTimeout(function () {
+                img.src = p.img3291;
+                img.alt = 'WoodSafe ' + p.size + ' UN 3291';
+                img.style.opacity = '1';
+            }, 180);
+        }
+
+        function wsSelectProduct(idx) {
+            wsProdIdx = idx;
+            var p = wsProducts[idx];
+
+            document.querySelectorAll('.ps-btn').forEach(function (b, i) {
+                b.classList.toggle('active', i === idx);
+            });
+
+            wsUpdateImage();
+
+            document.getElementById('pdSize').textContent = p.size;
+            document.getElementById('pdName').innerHTML = p.name;
+            document.getElementById('pdDesc').textContent = p.desc;
+
+            var grid = document.getElementById('pdSpecGrid');
+            grid.innerHTML = '';
+            p.specs.forEach(function (s) {
+                var row = document.createElement('div');
+                row.className = 'spec-row';
+                if (s[0]) {
+                    row.innerHTML = '<span class="spec-k">' + s[0] + '</span><span class="spec-v">' + s[1] + '</span>';
+                }
+                grid.appendChild(row);
+            });
+
+            document.getElementById('pdVideo').src = 'https://www.youtube.com/embed/' + p.video;
+
+            var accsEl = document.getElementById('pdAccs');
+            if (p.accs && p.accs.length) {
+                var html = '<div class="pd-accs-lbl">Compatible accessories</div>';
+                p.accs.forEach(function (a) {
+                    html += '<div class="pd-acc-item">' +
+                        '<img class="pd-acc-img" src="' + a.img + '" alt="' + a.code + '" />' +
+                        '<div><div class="pd-acc-code">' + a.code + '</div>' +
+                        '<div class="pd-acc-name">' + a.name + '</div></div>' +
+                        '</div>';
+                });
+                accsEl.innerHTML = html;
+            } else {
+                accsEl.innerHTML = '';
+            }
+
+            wsSwitchTab('info');
+        }
+
+        document.querySelectorAll('.ps-btn').forEach(function (btn, i) {
+            btn.addEventListener('click', function () { wsSelectProduct(i); });
+        });
+
+        document.querySelectorAll('.pt-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () { wsSwitchTab(btn.dataset.tab); });
+        });
+
+        wsSelectProduct(0);
+
+        // ---- Stats fill animation ----
+        (function () {
+            function animateFill(el, target, duration, delay) {
+                var start = performance.now() + delay;
+                (function frame(now) {
+                    var t = Math.min(Math.max((now - start) / duration, 0), 1);
+                    var eased = 1 - Math.pow(1 - t, 3);
+                    var v = target * eased;
+                    el.textContent = Math.round(v);
+                    el.style.setProperty('--p', v.toFixed(1) + '%');
+                    if (t < 1) requestAnimationFrame(frame);
+                })(start);
+            }
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var cmpIntro = document.querySelector('#compliance .intro');
+            if (!cmpIntro) return;
+            var fillObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (!e.isIntersecting) return;
+                    if (!prefersReduced) {
+                        cmpIntro.querySelectorAll('.digits').forEach(function (el, i) {
+                            animateFill(el, +el.dataset.target, 1900, i * 180);
+                        });
+                    } else {
+                        cmpIntro.querySelectorAll('.digits').forEach(function (el) {
+                            el.textContent = el.dataset.target;
+                            el.style.setProperty('--p', el.dataset.target + '%');
+                        });
+                    }
+                    fillObs.disconnect();
+                });
+            }, { threshold: 0.3 });
+            fillObs.observe(cmpIntro);
+        })();
+    </script>
+</body>
+
+</html>
